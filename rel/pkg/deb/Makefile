@@ -6,9 +6,9 @@ default:
 	mkdir -p $(BASE_DIR)/rel/pkg/out/riak-$(PKG_ID)/debian
 	tar -xf $(BASE_DIR)/rel/pkg/out/riak-$(PKG_ID).tar.gz -C $(BASE_DIR)/rel/pkg/out/riak-$(PKG_ID)/
 	ln -sf $(BASE_DIR)/rel/pkg/out/riak-$(PKG_ID).tar.gz $(BASE_DIR)/rel/pkg/out/riak_$(TAR_VERSION).orig.tar.gz
-
+	
 	cd $(BASE_DIR)/rel/pkg/out/riak-$(PKG_ID)/debian && \
-		$(REBAR) -v create \
+		../$(REBAR) -v create \
         	template_dir=$(BASE_DIR)/rel/pkg/deb/debian \
 			template=deb
 
