@@ -84,6 +84,7 @@ rel-rpm: locked-deps compile
 
 rel-deb: locked-deps compile
 	$(REBAR) as rel,deb release
+	cp -a _build/rel+deb/rel/riak rel/
 
 relclean:
 	rm -rf $(REL_DIR)
