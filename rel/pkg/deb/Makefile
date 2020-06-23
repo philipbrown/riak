@@ -19,7 +19,7 @@ default:
 		-i -uc -us -b
 	
 	mkdir -p $(BASE_DIR)/rel/pkg/packages
-	cd $(BASE_DIR)/rel/pkg && mv *$(PKG_VERSION)-$(PKG_BUILD)_*.deb packages
+	cd $(BASE_DIR)/rel/pkg/out && mv riak_*.deb ../packages
 	cd $(BASE_DIR)/rel/pkg/packages && \
 		for debfile in *.deb; do \
 			sha256sum $${debfile} > $${debfile}.sha \
