@@ -2,8 +2,8 @@
 Description=Riak KV Database
 
 [Service]
-ExecStart=/usr/bin/riak start
-ExecStop=/usr/bin/riak stop
+ExecStart=/usr/sbin/riak start
+ExecStop=/usr/sbin/riak stop
 User=riak
 Type=forking
 PIDFile=/var/run/riak/riak.pid

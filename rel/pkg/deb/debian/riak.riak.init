@@ -10,7 +10,7 @@
 ### END INIT INFO
 
 NAME=riak
-DAEMON=/usr/bin/$NAME
+DAEMON=/usr/sbin/$NAME
 SCRIPTNAME=/etc/init.d/$NAME
 RUNDIR=/var/run/$NAME
 
