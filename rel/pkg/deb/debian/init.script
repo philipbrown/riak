@@ -25,7 +25,7 @@ RUNDIR=/var/run/$NAME
 # if no HOME was set in /etc/default/$NAME then set one here
 # to the data directory for erlexec's sake
 if [ -z "$HOME" ]; then
-    export HOME={{platform_data_dir}}
+    export HOME="/var/lib/riak"
 fi
 
 #

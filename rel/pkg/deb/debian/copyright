@@ -2,7 +2,3 @@ Format: http://dep.debian.net/deps/dep5
 Upstream-Name: riak
 Upstream-Contact: packaging@riak.com <packaging@riak.com>
 
-Files: *
-Copyright: {{copyright}}
-License: {{license_type}}
-  {{license_full_text}}

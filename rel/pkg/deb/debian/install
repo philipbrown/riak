@@ -1,6 +1,6 @@
 rel/riak/lib usr/lib/riak
 rel/riak/erts* usr/lib/riak
 rel/riak/releases usr/lib/riak
-rel/riak/bin/riak usr/bin
+rel/riak/bin/riak usr/sbin
 rel/riak/etc/* etc/riak
 rel/riak/data/* var/lib/riak
