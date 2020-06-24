@@ -5,6 +5,7 @@ TAR_VERSION = $(shell git describe --tags | sed -e 's/\([0-9.]*\-[0-9]*\)-.*/\1/
 default:
 	mkdir -p $(BASE_DIR)/rel/pkg/out/riak-$(PKG_ID)/debian
 	cp -R $(BASE_DIR)/rel/pkg/deb/debian/* $(BASE_DIR)/rel/pkg/out/riak-$(PKG_ID)/debian
+	cp -R $(BASE_DIR)/rel/pkg/deb/lib/* $(BASE_DIR)/rel/pkg/out/riak-$(PKG_ID)/lib
 	tar -xf $(BASE_DIR)/rel/pkg/out/riak-$(PKG_ID).tar.gz -C $(BASE_DIR)/rel/pkg/out/riak-$(PKG_ID)/
 	ln -sf $(BASE_DIR)/rel/pkg/out/riak-$(PKG_ID).tar.gz $(BASE_DIR)/rel/pkg/out/riak_$(TAR_VERSION).orig.tar.gz
 
@@ -16,7 +17,7 @@ default:
 			-e REVISION=$(PKG_VERSION) \
 			-e RELEASE=$(PKG_BUILD) \
             -e REBAR=$(REBAR) \
-		-i -uc -us -b
+		-i -uc -us
 	
 	mkdir -p $(BASE_DIR)/rel/pkg/packages
 	cd $(BASE_DIR)/rel/pkg/out && mv riak_*.deb ../packages
