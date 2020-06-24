@@ -40,11 +40,6 @@ install: build
 	dh_fixperms
 	chmod 0755 $(ROOTDIR)/etc/riak
 	chmod -R a+rX $(ROOTDIR)/etc/riak
-	for file in lib/env.sh lib/app_epath.sh erts-*/bin/nodetool; do \
-		if [ -f $(LIBDIR)/$$file ]; then \
-			chmod 0755 $(LIBDIR)/$$file; \
-		fi; \
-	done
 	chmod -R go+rX debian/riak/usr/lib/riak/lib/
 	dh_shlibdeps
 
