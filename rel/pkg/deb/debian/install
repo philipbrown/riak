@@ -5,3 +5,4 @@ rel/riak/releases usr/lib/riak
 rel/riak/bin usr/lib/riak
 rel/riak/etc/* etc/riak
 rel/riak/data/* var/lib/riak
+rel/riak/usr/bin/riak usr/sbin/riak
