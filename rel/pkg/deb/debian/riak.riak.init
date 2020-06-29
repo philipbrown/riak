@@ -38,8 +38,7 @@ do_start()
         mkdir $RUNDIR
         chown riak:riak $RUNDIR
     fi
-    if [ ! -d $PIDDIR ]; then
-        mkdir $PIDDIR
+    if [ -d $PIDDIR ]; then
         chown riak:riak $PIDDIR
     fi
     # Return
