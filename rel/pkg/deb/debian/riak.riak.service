@@ -6,7 +6,7 @@ ExecStart=/usr/sbin/riak start
 ExecStop=/usr/sbin/riak stop
 User=riak
 Type=forking
-PIDFile=/var/run/riak/riak.pid
+PIDFile=/run/riak/riak.pid
 EnvironmentFile=/etc/default/riak
 RuntimeDirectory=riak
 
