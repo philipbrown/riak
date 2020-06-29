@@ -7,7 +7,7 @@ ExecStop=/usr/sbin/riak stop
 User=riak
 Type=forking
 PIDFile=/run/riak/riak.pid
-EnvironmentFile=/etc/default/riak
+EnvironmentFile=-/etc/default/riak
 RuntimeDirectory=riak
 
 [Install]
