@@ -5,7 +5,7 @@ Description=Riak KV Database
 ExecStart=/usr/sbin/riak start
 ExecStop=/usr/sbin/riak stop
 Type=forking
-PIDFile=/var/run/riak/riak.pid
+PIDFile=/run/riak/riak.pid
 EnvironmentFile=-/etc/default/riak
 RuntimeDirectory=riak
 
