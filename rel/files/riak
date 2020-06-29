@@ -3,13 +3,13 @@
 COMMAND={{platform_bin_dir}}/riak
 RUNNER_LOG_DIR={{platform_log_dir}}
 RUNNER_GEN_DIR="${RUNNER_GEN_DIR:-{{ platform_gen_dir }}}"
-RUNNER_GEN_DIR="${RUNNER_GEN_DIR:-$RUNNER_BASE_DIR}"
+RELEASE_ROOT_DIR="${RELEASE_ROOT_DIR:-{{ runner_base_dir }}}"
 
-if [ -f ="$RUNNER_GEN_DIR/vm.args"]; then
+if [ -e ="$RUNNER_GEN_DIR/vm.args" ]; then
     ln -sf $RUNNER_GEN_DIR/vm.args $RELEASE_ROOT_DIR/vm.args
 fi
 
-if [ -f ="$RUNNER_GEN_DIR/sys.config"]; then
+if [ -e ="$RUNNER_GEN_DIR/sys.config" ]; then
     ln -sf $RUNNER_GEN_DIR/sys.config $RELEASE_ROOT_DIR/sys.config
 fi
 
