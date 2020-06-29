@@ -19,8 +19,8 @@ if [[ $EUID -ne 0 ]]; then
    exit 1
 fi
 
-if [ -d $PIDDIR ]; then
-    chown riak:riak $PIDDIR
+if [ -d $PID_DIR ]; then
+    chown riak:riak $PID_DIR
 fi
 
 case "$1" in
