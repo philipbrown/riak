@@ -13,7 +13,6 @@ NAME=riak
 DAEMON=/usr/sbin/$NAME
 SCRIPTNAME=/etc/init.d/$NAME
 RUNDIR=/var/run/$NAME
-PIDDIR=/run/$NAME
 
 # Read configuration variable file if it is present
 [ -r /etc/default/$NAME ] && . /etc/default/$NAME
@@ -37,9 +36,6 @@ do_start()
     if [ ! -d $RUNDIR ]; then
         mkdir $RUNDIR
         chown riak:riak $RUNDIR
-    fi
-    if [ -d $PIDDIR ]; then
-        chown riak:riak $PIDDIR
     fi
     # Return
     #   0 if daemon has been started
